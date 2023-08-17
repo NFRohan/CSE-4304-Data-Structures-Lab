@@ -1,39 +1,48 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-int findMaxFunc(int* a, int len){
+// find max and min sum by subtracting min and max values from the total sum
+int findMaxFunc(int *a, int len)
+{
     int max{0};
-    for(int i = 0; i < len; i++){
-        if(a[i] > max){
+    for (int i = 0; i < len; i++)
+    {
+        if (a[i] > max)
+        {
             max = a[i];
         }
     }
     return max;
 }
 
-int findMinFunc(int *a, int len){
+int findMinFunc(int *a, int len)
+{
     int min = a[0];
-    for(int i = 0; i < len; i++){
-        if(a[i] < min){
+    for (int i = 0; i < len; i++)
+    {
+        if (a[i] < min)
+        {
             min = a[i];
         }
     }
     return min;
 }
 
-int totalSumFunc(int *a, int len){
+int totalSumFunc(int *a, int len)
+{
     int sum{0};
-    for(int i=0; i<len; i++){
+    for (int i = 0; i < len; i++)
+    {
         sum += a[i];
     }
     return sum;
 }
 
-
-int main(){
-    int arr[1024]={0}, len{0}, totalSum{0}, maxVal{0}, minVal{0};
+int main()
+{
+    int arr[1024] = {0}, len{0}, totalSum{0}, maxVal{0}, minVal{0};
     cin >> len;
-    for(int i = 0; i < len; i++){
+    for (int i = 0; i < len; i++)
+    {
         cin >> arr[i];
     }
 
@@ -42,6 +51,6 @@ int main(){
     minVal = findMinFunc(arr, len);
 
     cout << (totalSum - maxVal) << " " << (totalSum - minVal);
-    
+
     return 0;
 }
