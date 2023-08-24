@@ -1,5 +1,4 @@
 // fid d1:push, 2:pop, 3:isEmpty 4:isFull 5:stackSize d6:top;
-// struct implementation;
 #include <iostream>
 #include <vector>
 using namespace std;
